@@ -1,9 +1,9 @@
 package com.demo;
 
 
-import org.junit.Test;
+import org.testng.annotations.Test;
 
-public class TestNG_SampleCode {
+public class TestNG_SampleCode extends BaseTestClass{
     @Test
     public void testsetUP() {
         System.out.println("SetUp is more important");

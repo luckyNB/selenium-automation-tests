@@ -8,19 +8,10 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.util.concurrent.TimeUnit;
 
-public class Keyboard_Mouse_Operations {
+public class Keyboard_Mouse_Operations extends BaseTestClass{
     @Test
     public void keyboard_Mouse_Operations() throws InterruptedException, AWTException {
-        System.setProperty("webdriver.chrome.driver", "chromedriver");// Property
 
-        WebDriver driver = new ChromeDriver();// ChromeBrowser is selected dynamically for running the script
-        // WebDriver driver = new FirefoxDriver();
-
-        driver.manage().window().maximize();// for maximizing the window
-        driver.manage().deleteAllCookies();
-
-        driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         //2. enter the url -
         driver.navigate().to("https://www.google.com/");
         Thread.sleep(5000);

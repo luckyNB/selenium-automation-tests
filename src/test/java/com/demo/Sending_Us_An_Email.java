@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.concurrent.TimeUnit;
 
-public class Sending_Us_An_Email {
+public class Sending_Us_An_Email extends BaseTestClass{
     @Test
     public void sending_anEmail() throws InterruptedException {
 
