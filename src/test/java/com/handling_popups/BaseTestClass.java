@@ -13,12 +13,12 @@ public class BaseTestClass {
 
     @BeforeMethod(description = "setting the driver ")
     public void testSetUp() {
-        System.setProperty("webdriver.gecko.driver", "geckodriver");// Property
-        driver = new FirefoxDriver();
+        System.setProperty("webdriver.chrome.driver","chromedriver");
+        driver = new ChromeDriver();
         driver.manage().window().maximize();// for maximizing the window
         driver.manage().deleteAllCookies();
-        driver.manage().timeouts().pageLoadTimeout(100, TimeUnit.SECONDS);
-        driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
 
     @AfterMethod

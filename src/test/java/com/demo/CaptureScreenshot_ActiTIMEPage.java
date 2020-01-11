@@ -33,10 +33,10 @@ public class CaptureScreenshot_ActiTIMEPage extends BaseTestClass {
 		/*Created a folder called "screenshot" in the project directory
 		Created another file by concatenating the date value which has "_" in it
 		(Underscore is the accepted character while creating a file in the project )*/
-        File destFile = new File(".\\screenshot\\" + date2 + "__actiTIMELoginPage.png");
+        File destFile = new File("/home/user/workspace/Demo_Selenium/src/test/resources/Screenshots/" + date2 + "__actiTIMELoginPage.png");
 		/*copyFile() method is a static method present in FileUtils class of JAVA
 		storing the screenshot in the destination location*/
-        FileUtils.copyFile(srcFile, new File("/home/user/workspace/Demo_Selenium/src/test/resources/Screenshots/shot.jpg"));
+        FileUtils.copyFile(srcFile,  destFile);
         //closing the browser
         driver.close();
     }
