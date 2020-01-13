@@ -10,15 +10,14 @@ import org.testng.annotations.Test;
 import java.util.concurrent.TimeUnit;
 
 public class FecebookLoginAndLogin {
-    @Test
+    @Test(description = "Handling the notification alert of chrome browser")
     public void testAutomatingFacebookLoginAndLogout() throws InterruptedException {
         ChromeOptions options = new ChromeOptions();
 
         options.addArguments("--disable-notifications");
 
-        System.setProperty("webdriver.chrome.driver","chromedriver");
-
-        WebDriver driver =new ChromeDriver(options);
+        System.setProperty("webdriver.chrome.driver", "chromedriver");
+        WebDriver driver = new ChromeDriver(options);
         driver.manage().window().maximize();// for maximizing the window
         driver.manage().deleteAllCookies();
         driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
@@ -31,7 +30,7 @@ public class FecebookLoginAndLogin {
         WebElement password = driver.findElement(By.id("pass"));
 
         username.sendKeys("7030493048");
-        password.sendKeys("lucky143");
+        password.sendKeys("mypassword");
         WebElement Login = driver.findElement(By.xpath(("/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/form[1]/table[1]/tbody[1]/tr[2]/td[3]/label[1]/input[1]")));
         Login.click();
         Thread.sleep(5000);
