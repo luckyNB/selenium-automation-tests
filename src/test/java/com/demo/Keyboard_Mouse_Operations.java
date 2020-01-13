@@ -16,7 +16,7 @@ public class Keyboard_Mouse_Operations extends BaseTestClass{
         driver.navigate().to("https://www.google.com/");
         Thread.sleep(5000);
 //Creating an object of Robot Class
-        Robot r = new Robot();
+            Robot r = new Robot();
 //move the mouse by x and y coordinate
         r.mouseMove(300, 500);
 //press ALT key from keyboard
